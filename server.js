@@ -14,6 +14,7 @@ const corsOptions = {
     credentials: true,
 }
 
+app.use(express.static("public"))
 app.use(cors(corsOptions))
 
 app.get("/", (req, res) => res.send("Hello there"))
