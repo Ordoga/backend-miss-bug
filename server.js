@@ -17,8 +17,6 @@ const corsOptions = {
 app.use(express.static("public"))
 app.use(cors(corsOptions))
 
-app.get("/", (req, res) => res.send("Hello there"))
-
 app.get("/api/bug", async (req, res) => {
     try {
         const bugs = await bugService.query()
