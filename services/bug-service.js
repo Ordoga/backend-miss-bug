@@ -55,6 +55,7 @@ async function save(bugToSave) {
         } else {
             bugToSave._id = utilService.makeId()
             bugToSave.createdAt = Date.now()
+            bugs.push(bugToSave)
         }
         await _saveBugsToFile()
         return bugToSave

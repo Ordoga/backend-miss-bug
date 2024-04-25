@@ -31,6 +31,7 @@ app.get("/api/bug/save", async (req, res) => {
     try {
         const bugToSave = {
             _id: req.query._id,
+            title: req.query.title,
             severity: +req.query.severity,
         }
         const bugSaved = await bugService.save(bugToSave)
