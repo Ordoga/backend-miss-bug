@@ -1,13 +1,23 @@
-import e from "express"
-import { bugService } from "./services/bug-service.js"
-
 import express from "express"
+import cors from "cors"
+import { bugService } from "./services/bug-service.js"
 
 const app = express()
 
+const corsOptions = {
+    origin: [
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:3000",
+        "http://localhost:5173",
+        "http://localhost:3000",
+    ],
+    credentials: true,
+}
+
+app.use(cors(corsOptions))
+
 app.get("/", (req, res) => res.send("Hello there"))
 
-// return bugLists
 app.get("/api/bug", async (req, res) => {
     try {
         const bugs = await bugService.query()
@@ -21,7 +31,6 @@ app.get("/api/bug/save", async (req, res) => {
     try {
         const bugToSave = {
             _id: req.query._id,
-            title: req.query.title,
             severity: +req.query.severity,
         }
         const bugSaved = await bugService.save(bugToSave)
