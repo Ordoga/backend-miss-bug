@@ -4,24 +4,19 @@ import { bugService } from "./services/bug-service.js"
 
 const app = express()
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.resolve(__dirname, "public")))
-} else {
-    const corsOptions = {
-        origin: [
-            "http://127.0.0.1:5173",
-            "http://127.0.0.1:3000",
-            "http://localhost:5173",
-            "http://localhost:3000",
-        ],
-        credentials: true,
-    }
-    app.use(cors(corsOptions))
+const corsOptions = {
+    origin: [
+        "http://127.0.0.1:5173",
+        "http://127.0.0.1:3000",
+        "http://localhost:5173",
+        "http://localhost:3000",
+    ],
+    credentials: true,
 }
 
-app.get("/**", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"))
-})
+app.use(cors(corsOptions))
+
+app.get("/", (req, res) => res.send("Hello there"))
 
 app.get("/api/bug", async (req, res) => {
     try {
@@ -68,6 +63,4 @@ app.get("/api/bug/:bugId/remove", async (req, res) => {
 
 const port = process.env.PORT || 3030
 
-app.listen(port, () => {
-    console.log(`App listening on port ${port}!`)
-})
+app.listen(port, () => console.log("Server ready at port 3030"))
