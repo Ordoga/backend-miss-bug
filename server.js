@@ -4,19 +4,24 @@ import { bugService } from "./services/bug-service.js"
 
 const app = express()
 
-const corsOptions = {
-    origin: [
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:3000",
-        "http://localhost:5173",
-        "http://localhost:3000",
-    ],
-    credentials: true,
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.resolve(__dirname, "public")))
+} else {
+    const corsOptions = {
+        origin: [
+            "http://127.0.0.1:5173",
+            "http://127.0.0.1:3000",
+            "http://localhost:5173",
+            "http://localhost:3000",
+        ],
+        credentials: true,
+    }
+    app.use(cors(corsOptions))
 }
 
-app.use(cors(corsOptions))
-
-app.get("/", (req, res) => res.send("Hello there"))
+app.get("/**", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"))
+})
 
 app.get("/api/bug", async (req, res) => {
     try {
@@ -33,6 +38,7 @@ app.get("/api/bug/save", async (req, res) => {
             _id: req.query._id,
             title: req.query.title,
             severity: +req.query.severity,
+            description: req.query.description,
         }
         const bugSaved = await bugService.save(bugToSave)
         res.status(200).send(bugSaved)
@@ -47,7 +53,7 @@ app.get("/api/bug/:bugId", async (req, res) => {
         const bug = await bugService.getById(bugId)
         res.send(bug)
     } catch (err) {
-        res.send(err)
+        res.send("Could not find you bug")
     }
 })
 
@@ -60,4 +66,8 @@ app.get("/api/bug/:bugId/remove", async (req, res) => {
     }
 })
 
-app.listen(3030, () => console.log("Server ready at port 3030"))
+const port = process.env.PORT || 3030
+
+app.listen(port, () => {
+    console.log(`App listening on port ${port}!`)
+})
