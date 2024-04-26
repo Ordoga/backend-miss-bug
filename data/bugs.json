@@ -30,7 +30,7 @@
     {
         "_id": "THehCY",
         "title": "null",
-        "severity": 0,
+        "severity": 2342,
         "description": "null",
         "createdAt": 1714069215077
     },
@@ -56,10 +56,24 @@
         "createdAt": 1714113456193
     },
     {
-        "_id": "tBbGOF",
-        "title": "גכע",
-        "severity": 345,
-        "description": "גכע",
-        "createdAt": 1714113570132
+        "_id": "JokJTO",
+        "title": "sdfs",
+        "severity": 234,
+        "description": "",
+        "createdAt": 1714123739512
+    },
+    {
+        "_id": "xhEdul",
+        "title": "sdf",
+        "severity": 1,
+        "description": "sdf",
+        "createdAt": 1714123751502
+    },
+    {
+        "_id": "71xskS",
+        "title": "sdf",
+        "severity": 1,
+        "description": "sdf",
+        "createdAt": 1714123790773
     }
 ]
