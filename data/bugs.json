@@ -9,8 +9,15 @@
     {
         "_id": "GFjAqQ",
         "title": "Uncontrolled renders",
-        "severity": 12,
+        "severity": 0,
         "description": "Component keeps re-rendering",
         "createdAt": 1714127595241
+    },
+    {
+        "_id": "IxQNAX",
+        "title": "Bad Design",
+        "severity": 12,
+        "description": "The Design is bad",
+        "createdAt": 1714239731038
     }
 ]
