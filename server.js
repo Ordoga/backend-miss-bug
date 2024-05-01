@@ -27,6 +27,16 @@ app.get("/api/bug", async (req, res) => {
     }
 })
 
+app.get("/api/bug/:bugId", async (req, res) => {
+    try {
+        const bugId = req.params.bugId
+        const bug = await bugService.getById(bugId)
+        res.send(bug)
+    } catch (err) {
+        res.send("Could not find you bug")
+    }
+})
+
 app.get("/api/bug/save", async (req, res) => {
     try {
         const bugToSave = {
@@ -42,17 +52,8 @@ app.get("/api/bug/save", async (req, res) => {
     }
 })
 
-app.get("/api/bug/:bugId", async (req, res) => {
-    try {
-        const bugId = req.params.bugId
-        const bug = await bugService.getById(bugId)
-        res.send(bug)
-    } catch (err) {
-        res.send("Could not find you bug")
-    }
-})
 
-app.get("/api/bug/:bugId/remove", async (req, res) => {
+app.delete("/api/bug/:bugId", async (req, res) => {
     try {
         await bugService.removeBug(req.params.bugId)
         res.send("bug with ID: " + req.params.bugId + " Deleted")

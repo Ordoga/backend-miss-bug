@@ -1,12 +1,5 @@
 [
     {
-        "_id": "1NNxgd",
-        "title": "Component isn't rendering",
-        "severity": 4,
-        "description": "The component is not rendering after an update",
-        "createdAt": 1714127570545
-    },
-    {
         "_id": "GFjAqQ",
         "title": "Uncontrolled renders",
         "severity": 0,
