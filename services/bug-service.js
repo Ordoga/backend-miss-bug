@@ -49,9 +49,9 @@ async function save(bugToSave) {
             if (bugIdx === -1) {
                 throw new Error(`Could not find bug with id ${bugToSave._id}`)
             }
+            // TODO : Add labels functionality
             bugToSave = { ...bugs[bugIdx], severity: bugToSave.severity }
             bugs[bugIdx] = bugToSave
-            return bugToSave
         } else {
             bugToSave._id = utilService.makeId()
             bugToSave.createdAt = Date.now()
