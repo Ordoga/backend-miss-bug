@@ -14,16 +14,9 @@
         "createdAt": 1714239731038
     },
     {
-        "_id": "IxQNAX2",
-        "title": "Bad Design222",
-        "severity": 2222,
-        "description": "The Design is bad",
-        "createdAt": 1714239731038
-    },
-    {
         "_id": "IxQNAX3",
         "title": "Bad Design333",
-        "severity": 3333,
+        "severity": 0,
         "description": "The Design is bad",
         "createdAt": 1714239731038
     },
@@ -68,11 +61,17 @@
         "createdAt": 1714644149651
     },
     {
-        "_id": "XqU37u",
-        "title": "666",
-        "description": "666",
-        "labels": [],
-        "severity": 15,
-        "createdAt": 1714648921711
+        "title": "GREAT BUG",
+        "description": "BUG BUG",
+        "severity": 0,
+        "_id": "DdrY89",
+        "createdAt": 1714649471257
+    },
+    {
+        "title": "BUGBUG",
+        "description": "BUGBUG",
+        "severity": 12,
+        "_id": "XkPHuA",
+        "createdAt": 1714649480988
     }
 ]
