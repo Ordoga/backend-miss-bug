@@ -68,14 +68,11 @@
         "createdAt": 1714644149651
     },
     {
-        "title": "The Try2",
-        "description": "big Try",
-        "labels": [
-            "Try Label",
-            "Another Try Label"
-        ],
-        "severity": 2,
-        "_id": "UfnPBP",
-        "createdAt": 1714646073175
+        "_id": "XqU37u",
+        "title": "666",
+        "description": "666",
+        "labels": [],
+        "severity": 15,
+        "createdAt": 1714648921711
     }
 ]

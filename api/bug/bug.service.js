@@ -1,7 +1,7 @@
 import fs from "fs"
-import { utilService } from "./util.service.js"
+import { utilService } from "../../services/util.service.js"
 
-const bugs = utilService.readJsonFile("data/bugs.json")
+const bugs = utilService.readJsonFile("./data/bugs.json")
 
 export const bugService = {
     query,
@@ -10,7 +10,6 @@ export const bugService = {
     save,
 }
 
-// async?
 async function query() {
     try {
         return bugs
@@ -64,7 +63,7 @@ async function save(bugToSave) {
     }
 }
 
-async function _saveBugsToFile(path = "data/bugs.json") {
+async function _saveBugsToFile(path = "./data/bugs.json") {
     return new Promise((resolve, reject) => {
         const data = JSON.stringify(bugs, null, 4)
         fs.writeFile(path, data, err => {
