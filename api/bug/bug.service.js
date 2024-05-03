@@ -10,7 +10,7 @@ export const bugService = {
     save,
 }
 
-async function query(filterBy = {}, sortBy = {}) {
+async function query(filterBy = getDefaultFilter(), sortBy = getDefaultSort()) {
     let filteredBugs = [...bugs]    
     try {
         filteredBugs = filterBugs(filteredBugs ,filterBy)
@@ -38,19 +38,16 @@ function sortBugs(bugs,sortBy){
 
 function filterBugs(bugs, filterBy){
     if(filterBy.textSearch){
-        bugs = bugs.filter(bug => (            
+        bugs = bugs.filter(bug => (
             bug.title.toLowerCase().includes(filterBy.textSearch.toLowerCase()) ||
             bug.description.toLowerCase().includes(filterBy.textSearch.toLowerCase())))
         }
-        
     if(filterBy.minSeverity){
         bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
     }
-
     if(filterBy.labels){
-
+        // TODO
     }
-
     return bugs
 }
 
@@ -114,3 +111,18 @@ function _sortByTitle(bugs,sortDir){
     bugs = bugs.sort(sortComperator)
     return bugs
   }
+
+  function getDefaultFilter() {
+    return {
+        textSearch: "",
+        minSeverity: "",
+        labels: ""
+    }
+}
+
+function getDefaultSort(){
+    return {
+        sortBy: "severity",
+        sortDir: -1
+    }
+}
