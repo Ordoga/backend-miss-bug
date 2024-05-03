@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 import { bugRoutes } from "./api/bug/bug.routes.js"
+import { userRoutes } from "./api/user/user.routes.js"
 
 const app = express()
 
@@ -19,7 +20,9 @@ app.use(express.static("public"))
 app.use(cors(corsOptions))
 app.use(express.json())
 
+
 app.use('/api/bug', bugRoutes)
+app.use('/api/user', userRoutes)
 
 const port = process.env.PORT || 3030
 

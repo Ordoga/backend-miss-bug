@@ -1,0 +1,42 @@
+[
+    {
+        "_id": "2user",
+        "fullname": "Nurit Bechar",
+        "username": "nurit",
+        "password": "nurnur",
+        "score": 150
+    },
+    {
+        "_id": "3user",
+        "fullname": "itzik doga",
+        "username": "itzikkkk",
+        "password": "itzikd101",
+        "score": 90
+    },
+    {
+        "_id": "4user",
+        "fullname": "Noa Kaz",
+        "username": "noanoatz",
+        "password": "noakazanoa",
+        "score": 200
+    },
+    {
+        "score": null,
+        "_id": "LGpTjX"
+    },
+    {
+        "score": null,
+        "_id": "mH2YRe"
+    },
+    {
+        "score": null,
+        "_id": "W4uG2a"
+    },
+    {
+        "_id": "Jymchn",
+        "fullname": "FULL NAME",
+        "username": "USERNAME",
+        "password": "PASSWORD",
+        "score": 99
+    }
+]
