@@ -10,12 +10,32 @@ export const bugService = {
     save,
 }
 
-async function query() {
+async function query(filterBy = {}) {
+    let filteredBugs = [...bugs]    
     try {
-        return bugs
+        filteredBugs = filterBugs(filteredBugs ,filterBy)
+        return filteredBugs
     } catch (err) {
         throw err
     }
+}
+
+function filterBugs(bugs, filterBy){
+    if(filterBy.textSearch){
+        bugs = bugs.filter(bug => (            
+            bug.title.toLowerCase().includes(filterBy.textSearch.toLowerCase()) ||
+            bug.description.toLowerCase().includes(filterBy.textSearch.toLowerCase())))
+        }
+        
+    if(filterBy.minSeverity){
+        bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
+    }
+
+    if(filterBy.labels){
+
+    }
+
+    return bugs
 }
 
 async function getById(bugId) {
