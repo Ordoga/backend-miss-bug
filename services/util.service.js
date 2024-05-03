@@ -1,8 +1,29 @@
 import fs from "fs"
 
 export const utilService = {
+  sortingByTitleComparator,
   makeId,
   readJsonFile,
+}
+
+function sortingByTitleComparator(sortDir){
+  if (sortDir === -1){
+    return sortByTitleDescending
+  }else{
+    return sortByTitleAscending
+  }
+}
+
+function sortByTitleAscending(a, b) {
+  if (a.title < b.title) {
+    return -1
+  } else {
+    return 1
+  }
+}
+
+function sortByTitleDescending(a, b) {
+  return sortByTitleAscending(b, a)
 }
 
 function makeId(length = 6) {

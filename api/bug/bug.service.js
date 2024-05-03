@@ -10,14 +10,30 @@ export const bugService = {
     save,
 }
 
-async function query(filterBy = {}) {
+async function query(filterBy = {}, sortBy = {}) {
     let filteredBugs = [...bugs]    
     try {
         filteredBugs = filterBugs(filteredBugs ,filterBy)
+        filteredBugs = sortBugs(filteredBugs,sortBy)
         return filteredBugs
     } catch (err) {
         throw err
     }
+}
+
+function sortBugs(bugs,sortBy){
+    switch(sortBy.sortBy){
+        case 'createdAt':
+            bugs = bugs.sort((a,b) => (a.createdAt - b.createdAt)*sortBy.sortDir)
+            break;
+        case 'severity':
+            bugs = bugs.sort((a,b) => (a.severity - b.severity)*sortBy.sortDir)
+            break;
+        case 'title':
+            bugs = _sortByTitle(bugs, sortBy.sortDir)
+            break;
+    }
+    return bugs
 }
 
 function filterBugs(bugs, filterBy){
@@ -92,3 +108,9 @@ async function _saveBugsToFile(path = "./data/bugs.json") {
         })
     })
 }
+
+function _sortByTitle(bugs,sortDir){
+    const sortComperator = utilService.sortingByTitleComparator(sortDir)
+    bugs = bugs.sort(sortComperator)
+    return bugs
+  }
