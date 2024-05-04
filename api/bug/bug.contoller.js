@@ -1,5 +1,6 @@
 import { bugService } from "./bug.service.js";
 
+
 export async function getBugs(req,res){
     try {
         const { textSearch, minSeverity, labels, sortBy, sortDir } = req.query
@@ -17,6 +18,16 @@ export async function getBug(req,res){
     try {
         const bugId = req.params.bugId
         const bug = await bugService.getById(bugId)
+        let visitedBugs = req.cookies.visitedBugs || "[]"
+        visitedBugs = JSON.parse(visitedBugs)
+        if(visitedBugs.length >= 3){
+            return res.status(401).send('Wait for a bit')
+        }
+        if(!visitedBugs.includes(bugId)){
+            visitedBugs.push(bugId)
+        }
+        visitedBugs = JSON.stringify(visitedBugs)
+        res.cookie('visitedBugs', visitedBugs, { maxAge : 7000 })
         res.send(bug)
     } catch (err) {
         res.send("Could not find your bug")

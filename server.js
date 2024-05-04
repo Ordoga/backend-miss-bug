@@ -1,5 +1,6 @@
 import express from "express"
 import cors from "cors"
+import cookieParser from 'cookie-parser'
 import { bugRoutes } from "./api/bug/bug.routes.js"
 import { userRoutes } from "./api/user/user.routes.js"
 
@@ -19,6 +20,7 @@ const corsOptions = {
 app.use(express.static("public"))
 app.use(cors(corsOptions))
 app.use(express.json())
+app.use(cookieParser())
 
 
 app.use('/api/bug', bugRoutes)
