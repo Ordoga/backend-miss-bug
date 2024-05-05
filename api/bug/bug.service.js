@@ -1,7 +1,10 @@
 import fs from "fs"
 import { utilService } from "../../services/util.service.js"
 
+const PAGE_SIZE = 4
 const bugs = utilService.readJsonFile("./data/bugs.json")
+
+
 
 export const bugService = {
     query,
@@ -13,42 +16,21 @@ export const bugService = {
 async function query(filterBy = getDefaultFilter(), sortBy = getDefaultSort()) {
     let filteredBugs = [...bugs]    
     try {
-        filteredBugs = filterBugs(filteredBugs ,filterBy)
-        filteredBugs = sortBugs(filteredBugs,sortBy)
+        filteredBugs = _filterBugs(filteredBugs ,filterBy)
+        filteredBugs = _sortBugs(filteredBugs,sortBy)
+
+        filteredBugs = _getPage(filteredBugs, filterBy.pageIdx)
+
+        
         return filteredBugs
     } catch (err) {
         throw err
     }
 }
 
-function sortBugs(bugs,sortBy){
-    switch(sortBy.sortBy){
-        case 'createdAt':
-            bugs = bugs.sort((a,b) => (a.createdAt - b.createdAt)*sortBy.sortDir)
-            break;
-        case 'severity':
-            bugs = bugs.sort((a,b) => (a.severity - b.severity)*sortBy.sortDir)
-            break;
-        case 'title':
-            bugs = _sortByTitle(bugs, sortBy.sortDir)
-            break;
-    }
-    return bugs
-}
-
-function filterBugs(bugs, filterBy){
-    if(filterBy.textSearch){
-        bugs = bugs.filter(bug => (
-            bug.title.toLowerCase().includes(filterBy.textSearch.toLowerCase()) ||
-            bug.description.toLowerCase().includes(filterBy.textSearch.toLowerCase())))
-        }
-    if(filterBy.minSeverity){
-        bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
-    }
-    if(filterBy.labels){
-        // TODO
-    }
-    return bugs
+function _getPage(bugs, pageIdx = 0){
+    const startIdx = pageIdx * PAGE_SIZE
+    return bugs.slice(startIdx, startIdx + PAGE_SIZE)
 }
 
 async function getById(bugId) {
@@ -106,17 +88,12 @@ async function _saveBugsToFile(path = "./data/bugs.json") {
     })
 }
 
-function _sortByTitle(bugs,sortDir){
-    const sortComperator = utilService.sortingByTitleComparator(sortDir)
-    bugs = bugs.sort(sortComperator)
-    return bugs
-  }
-
-  function getDefaultFilter() {
+function getDefaultFilter() {
     return {
         textSearch: "",
         minSeverity: "",
-        labels: ""
+        labels: "",
+        pageIdx: 0
     }
 }
 
@@ -125,4 +102,40 @@ function getDefaultSort(){
         sortBy: "severity",
         sortDir: -1
     }
+}
+
+function _filterBugs(bugs, filterBy){
+    if(filterBy.textSearch){
+        bugs = bugs.filter(bug => (
+            bug.title.toLowerCase().includes(filterBy.textSearch.toLowerCase()) ||
+            bug.description.toLowerCase().includes(filterBy.textSearch.toLowerCase())))
+        }
+    if(filterBy.minSeverity){
+        bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
+    }
+    if(filterBy.labels){
+        // TODO
+    }
+    return bugs
+}
+
+function _sortBugs(bugs,sortBy){
+    switch(sortBy.sortBy){
+        case 'createdAt':
+            bugs = bugs.sort((a,b) => (a.createdAt - b.createdAt)*sortBy.sortDir)
+            break;
+        case 'severity':
+            bugs = bugs.sort((a,b) => (a.severity - b.severity)*sortBy.sortDir)
+            break;
+        case 'title':
+            bugs = _sortByTitle(bugs, sortBy.sortDir)
+            break;
+    }
+    return bugs
+}
+
+function _sortByTitle(bugs,sortDir){
+    const sortComperator = utilService.sortingByTitleComparator(sortDir)
+    bugs = bugs.sort(sortComperator)
+    return bugs
 }
