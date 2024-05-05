@@ -1,7 +1,7 @@
 import fs from "fs"
 import { utilService } from "../../services/util.service.js"
 
-const PAGE_SIZE = 4
+const PAGE_SIZE = 6
 const bugs = utilService.readJsonFile("./data/bugs.json")
 
 
@@ -15,12 +15,14 @@ export const bugService = {
 
 async function query(filterBy = getDefaultFilter(), sortBy = getDefaultSort()) {
     let filteredBugs = [...bugs]    
+
     try {
         filteredBugs = _filterBugs(filteredBugs ,filterBy)
         filteredBugs = _sortBugs(filteredBugs,sortBy)
         const response = {
-            allMatchingBugsLength : filteredBugs.length
+            amountOfToalMathchingBugs : filteredBugs.length
         }
+
         filteredBugs = _getPage(filteredBugs, filterBy.pageIdx)
         response.bugs = filteredBugs
         return response
