@@ -18,11 +18,12 @@ async function query(filterBy = getDefaultFilter(), sortBy = getDefaultSort()) {
     try {
         filteredBugs = _filterBugs(filteredBugs ,filterBy)
         filteredBugs = _sortBugs(filteredBugs,sortBy)
-
+        const response = {
+            allMatchingBugsLength : filteredBugs.length
+        }
         filteredBugs = _getPage(filteredBugs, filterBy.pageIdx)
-
-        
-        return filteredBugs
+        response.bugs = filteredBugs
+        return response
     } catch (err) {
         throw err
     }
