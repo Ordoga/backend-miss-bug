@@ -14,29 +14,45 @@
         "score": 90
     },
     {
-        "_id": "4user",
-        "fullname": "Noa Kaz",
-        "username": "noanoatz",
-        "password": "noakazanoa",
-        "score": 200
+        "_id": "3user",
+        "fullname": "itzik doga",
+        "username": "itzikkkk",
+        "password": "itzikd101",
+        "score": 90
     },
     {
-        "score": null,
-        "_id": "LGpTjX"
+        "_id": "3user",
+        "fullname": "itzik doga",
+        "username": "itzikkkk",
+        "password": "itzikd101",
+        "score": 90
     },
     {
-        "score": null,
-        "_id": "mH2YRe"
+        "_id": "3user",
+        "fullname": "itzik doga",
+        "username": "itzikkkk",
+        "password": "itzikd101",
+        "score": 90
     },
     {
-        "score": null,
-        "_id": "W4uG2a"
+        "_id": "3user",
+        "fullname": "itzik doga",
+        "username": "itzikkkk",
+        "password": "itzikd101",
+        "score": 90
     },
     {
-        "_id": "Jymchn",
-        "fullname": "FULL NAME",
-        "username": "USERNAME",
-        "password": "PASSWORD",
-        "score": 99
+        "_id": "3user",
+        "fullname": "itzik doga",
+        "username": "itzikkkk",
+        "password": "itzikd101",
+        "score": 90
+    },
+    {
+        "_id": "3user",
+        "fullname": "itzik doga",
+        "username": "itzikkkk",
+        "password": "itzikd101",
+        "score": 90
     }
 ]
