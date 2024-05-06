@@ -32,7 +32,7 @@ export async function addUser(req,res){
 
 export async function updateUser(req,res){
     const { _id, fullname, username, password, score } = req.body
-    let userToSave = { _id, fullname, username, password, score : +score }    
+    let userToSave = { _id, fullname, username, password, score : +score } 
     try {
         userToSave = await userService.save(userToSave)
         res.send(userToSave)
