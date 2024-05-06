@@ -95,7 +95,7 @@ function getDefaultFilter() {
     return {
         textSearch: "",
         minSeverity: "",
-        labels: "",
+        labels: [],
         pageIdx: 0
     }
 }
