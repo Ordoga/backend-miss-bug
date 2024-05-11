@@ -14,15 +14,19 @@ export const bugService = {
 }
 
 async function query(filterBy = getDefaultFilter(), sortBy = getDefaultSort()) {
-    let filteredBugs = [...bugs]    
-
+    let filteredBugs = [...bugs]
+    let labelsSet = new Set([])
+    filteredBugs.map(bug => (
+        bug.labels.map(label => {
+            labelsSet.add(label)})
+    ))
+    let labelSetAsArray = Array.from(labelsSet)
+    const response = {}
+    response.allLabels = labelSetAsArray   
     try {
         filteredBugs = _filterBugs(filteredBugs ,filterBy)
         filteredBugs = _sortBugs(filteredBugs,sortBy)
-        const response = {
-            amountOfToalMathchingBugs : filteredBugs.length
-        }
-
+        response.amountOfToalMathchingBugs = filteredBugs.length
         filteredBugs = _getPage(filteredBugs, filterBy.pageIdx)
         response.bugs = filteredBugs
         return response
@@ -120,7 +124,9 @@ function _filterBugs(bugs, filterBy){
         bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
     }
     if(filterBy.labels){
-
+        filterBy.labels.map(label => (
+            bugs = bugs.filter(bug => bug.labels.includes(label))
+        ))
     }
     return bugs
 }

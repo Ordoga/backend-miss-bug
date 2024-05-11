@@ -67,25 +67,11 @@
         "createdAt": 1714643553276
     },
     {
-        "title": "The Title333",
-        "description": "hihi",
-        "labels": [
-            "Academy",
-            "Pick Me"
-        ],
-        "severity": 6,
-        "_id": "rZd31u",
-        "createdAt": 1714644138907
-    },
-    {
-        "title": "555",
-        "description": "hihi",
-        "labels": [
-            "NodeJS",
-            "Coding"
-        ],
-        "severity": 15,
-        "_id": "81aq84",
-        "createdAt": 1714644149651
+        "title": "sdf",
+        "description": "fas",
+        "labels": [],
+        "severity": 23,
+        "_id": "blyMcO",
+        "createdAt": 1715466609549
     }
 ]
