@@ -133,13 +133,13 @@ function _sortBugs(bugs,sortBy){
         case 'severity':
             bugs = bugs.sort((a,b) => (a.severity - b.severity)*sortBy.sortDir)
             break;
-        case 'title':
-            bugs = _sortByTitle(bugs, sortBy.sortDir)
-            break;
+            case 'title':
+                bugs = _sortByTitle(bugs, sortBy.sortDir)
+                break;
+        }
+        return bugs
     }
-    return bugs
-}
-
+    
 function _sortByTitle(bugs,sortDir){
     const sortComperator = utilService.sortingByTitleComparator(sortDir)
     bugs = bugs.sort(sortComperator)
