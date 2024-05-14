@@ -49,6 +49,6 @@ async function signup({username, password}){
     if(userExist) throw 'Username already taken'
 
     const saltRounds = 10
-    const hashedPassword = await bcrypt.hash(password. saltRounds)
+    const hashedPassword = await bcrypt.hash(password, saltRounds)
     return userService.save({username, password:hashedPassword})
 }

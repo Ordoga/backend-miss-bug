@@ -14,7 +14,17 @@ export async function login(req,res){
 }
 
 export async function signup(req,res){
-    res.send('Hi!2')
+    try{
+        const credentials = req.body
+        const account = await authService.signup(credentials)
+        console.log('New account created : ' + JSON.stringify(account))
+        const miniUser = await authService.login(credentials.username,credentials.password)
+        const loginToken = await authService.getLoginToken(miniUser)
+        res.cookie('loginToken', loginToken, { sameSite: 'None', secure: true })
+        res.json(miniUser)
+    }catch(error){
+        res.status(400).send('Signup failed: ' + error)
+    }
 }
 
 export async function logout(req,res){
