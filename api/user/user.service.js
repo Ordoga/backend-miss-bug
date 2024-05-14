@@ -8,6 +8,7 @@ export const userService = {
     getById,
     removeUser,
     save,
+    getByUsername,
 }
 
 async function query() {
@@ -59,6 +60,12 @@ async function save(userToSave) {
         throw err.message
     }
 }
+
+async function getByUsername(username) {
+    const user = users.find(user => user.username === username)
+    return user
+}
+
 
 async function _saveUsersToFile(path = "./data/users.json") {
     return new Promise((resolve, reject) => {
