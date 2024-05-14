@@ -44,11 +44,11 @@ async function login(username,password){
     return miniUser
 }
 
-async function signup({username, password}){
+async function signup({fullname, username, password}){
     const userExist = await userService.getByUsername(username)
     if(userExist) throw 'Username already taken'
 
     const saltRounds = 10
     const hashedPassword = await bcrypt.hash(password, saltRounds)
-    return userService.save({username, password:hashedPassword})
+    return userService.save({fullname, username, password:hashedPassword})
 }

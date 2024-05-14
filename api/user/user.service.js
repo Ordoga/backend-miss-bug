@@ -52,6 +52,8 @@ async function save(userToSave) {
             users[userIdx] = userToSave
         } else {
             userToSave._id = utilService.makeId()
+            userToSave.score = 100
+            userToSave.isAdmin = false
             users.push(userToSave)
         }
         await _saveUsersToFile()
