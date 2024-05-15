@@ -37,7 +37,8 @@ export async function getBug(req,res){
 
 export async function addBug(req,res){
     const { title, description, severity, labels } = req.body
-    let bugToSave = { title, description, labels, severity : +severity}
+    const createdBy = { _id: req.loggedInUser._id, fullname: req.loggedInUser.fullname }
+    let bugToSave = { title, description, labels, severity : +severity, createdBy}
     try {
         // Get the bug with createdAt & _id after save
         bugToSave = await bugService.save(bugToSave)

@@ -15,17 +15,6 @@
         }
     },
     {
-        "_id": "IxQNAX",
-        "title": "Bad Design",
-        "labels": [
-            "dev-branch",
-            "backend"
-        ],
-        "severity": 12,
-        "description": "The Design is bad",
-        "createdAt": 1714239731038
-    },
-    {
         "_id": "IxQNAX3",
         "title": "Bad Design333",
         "labels": [
@@ -49,17 +38,6 @@
         "createdAt": 1714643215596
     },
     {
-        "title": "The Title",
-        "description": "hihi",
-        "labels": [
-            "need-CR",
-            "Reviewd"
-        ],
-        "severity": 5,
-        "_id": "8hB4m6",
-        "createdAt": 1714643535242
-    },
-    {
         "title": "The Title333",
         "description": "hihi",
         "labels": [
@@ -71,19 +49,115 @@
         "createdAt": 1714643553276
     },
     {
-        "title": "sdf",
-        "description": "fas",
-        "labels": [],
-        "severity": 23,
-        "_id": "blyMcO",
-        "createdAt": 1715466609549
-    },
-    {
         "title": "Context",
         "description": "try",
         "labels": [],
         "severity": 12,
         "_id": "EKjRjr",
         "createdAt": 1715791912750
+    },
+    {
+        "title": "sd",
+        "description": "df",
+        "labels": [],
+        "severity": 12,
+        "_id": "PxWusG",
+        "createdAt": 1715811444552
+    },
+    {
+        "title": "sdf",
+        "description": "df",
+        "labels": [],
+        "severity": 12,
+        "_id": "0zwBly",
+        "createdAt": 1715811451976
+    },
+    {
+        "title": "sd",
+        "description": "df",
+        "labels": [],
+        "severity": 12,
+        "createdBy": {
+            "_id": "ZPIdfw",
+            "fullname": "Or Doga",
+            "score": 100,
+            "isAdmin": false
+        },
+        "_id": "THM71k",
+        "createdAt": 1715811599207
+    },
+    {
+        "title": "ordoga bug",
+        "description": "or",
+        "labels": [],
+        "severity": 14,
+        "createdBy": {
+            "_id": "ZPIdfw",
+            "fullname": "Or Doga"
+        },
+        "_id": "bfO7x0",
+        "createdAt": 1715811699562
+    },
+    {
+        "title": "df",
+        "description": "df",
+        "labels": [],
+        "severity": 0,
+        "createdBy": {
+            "_id": "ZPIdfw",
+            "fullname": "Or Doga"
+        },
+        "_id": "6jCWbN",
+        "createdAt": 1715812116697
+    },
+    {
+        "title": "as",
+        "description": "as",
+        "labels": [],
+        "severity": 12,
+        "createdBy": {
+            "_id": "ZPIdfw",
+            "fullname": "Or Doga"
+        },
+        "_id": "Pxhv0N",
+        "createdAt": 1715812374366
+    },
+    {
+        "title": "postman",
+        "description": "postman",
+        "labels": [
+            "label"
+        ],
+        "severity": 99,
+        "createdBy": {
+            "_id": "ZPIdfw",
+            "fullname": "Or Doga"
+        },
+        "_id": "BKENp4",
+        "createdAt": 1715812759854
+    },
+    {
+        "title": "iaiaia",
+        "description": "jsdfs",
+        "labels": [],
+        "severity": 1401,
+        "createdBy": {
+            "_id": "ZPIdfw",
+            "fullname": "Or Doga"
+        },
+        "_id": "PNOqC6",
+        "createdAt": 1715813299055
+    },
+    {
+        "title": "Shukiii",
+        "description": "10",
+        "labels": [],
+        "severity": 5000,
+        "createdBy": {
+            "_id": "r46cgP",
+            "fullname": "Shuki Duki"
+        },
+        "_id": "Vxn9AP",
+        "createdAt": 1715816151048
     }
 ]

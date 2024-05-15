@@ -37,5 +37,13 @@
         "_id": "fpiMnz",
         "score": 100,
         "isAdmin": false
+    },
+    {
+        "fullname": "Shuki Duki",
+        "username": "shukiduki",
+        "password": "$2b$10$5ebKL/OduY3DC9tK6p5O4.8lxj4zfa9pH6O2aF10tVC3WaO9bM04W",
+        "_id": "r46cgP",
+        "score": 100,
+        "isAdmin": false
     }
 ]
