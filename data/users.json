@@ -29,5 +29,13 @@
         "_id": "ZPIdfw",
         "score": 100,
         "isAdmin": false
+    },
+    {
+        "fullname": "Nurit Behar",
+        "username": "DKnb",
+        "password": "$2b$10$5wi3mkwl8cjsxxPDy1Xs7OTVbHfSSMsVARttJ6tZr9LiHXGgAAJfq",
+        "_id": "fpiMnz",
+        "score": 100,
+        "isAdmin": false
     }
 ]
