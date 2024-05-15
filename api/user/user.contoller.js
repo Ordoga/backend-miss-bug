@@ -12,7 +12,7 @@ export async function getUsers(req,res){
 export async function getUser(req,res){
     try {
         const userId = req.params.userId
-        const user = await userService.getById(userId)
+        const user = await userService.getMiniuserById(userId)
         res.send(user)
     } catch (err) {
         res.send("Could not find your user")

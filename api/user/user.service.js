@@ -6,6 +6,7 @@ const users = utilService.readJsonFile("./data/users.json")
 export const userService = {
     query,
     getById,
+    getMiniuserById,
     removeUser,
     save,
     getByUsername,
@@ -24,6 +25,16 @@ async function getById(userId) {
         const user = users.find(user => user._id === userId)
         if (!user) throw new Error(`Could not find user with ID ${userId}`)
         return user
+    } catch (err) {
+        throw err.message
+    }
+}
+
+async function getMiniuserById(userId) {
+    try {
+        const user = users.find(user => user._id === userId)
+        if (!user) throw new Error(`Could not find user with ID ${userId}`)
+        return { fullname: user.fullname, _id: user._id }
     } catch (err) {
         throw err.message
     }
