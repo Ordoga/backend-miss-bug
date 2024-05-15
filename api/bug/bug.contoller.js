@@ -3,8 +3,8 @@ import { bugService } from "./bug.service.js";
 
 export async function getBugs(req,res){
     try {
-        const { textSearch, minSeverity, labels, sortBy, sortDir, pageIdx } = req.query
-        const filterBy = { textSearch, minSeverity : +minSeverity, labels, pageIdx}
+        const { textSearch, minSeverity, labels, sortBy, sortDir, pageIdx, createdBy } = req.query
+        const filterBy = { textSearch, minSeverity : +minSeverity, labels, pageIdx, createdBy}
         const sortByObj = { sortBy, sortDir: +sortDir }
         const bugs = await bugService.query(filterBy, sortByObj)
         res.send(bugs)

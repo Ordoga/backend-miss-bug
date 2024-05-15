@@ -8,7 +8,11 @@
         ],
         "severity": 0,
         "description": "Component keeps re-rendering",
-        "createdAt": 1714127595241
+        "createdAt": 1714127595241,
+        "createdBy": {
+            "_id": "7X5KU7",
+            "fullname": "Or Doga"
+        }
     },
     {
         "_id": "IxQNAX",

@@ -4,8 +4,6 @@ import { utilService } from "../../services/util.service.js"
 const PAGE_SIZE = 6
 const bugs = utilService.readJsonFile("./data/bugs.json")
 
-
-
 export const bugService = {
     query,
     getById,
@@ -15,6 +13,10 @@ export const bugService = {
 
 async function query(filterBy = getDefaultFilter(), sortBy = getDefaultSort()) {
     let filteredBugs = [...bugs]
+    if(filterBy.createdBy){
+        filteredBugs = _filterByUser(filteredBugs, filterBy.createdBy)
+    }
+    // console.log(filteredBugs)
     let labelsSet = new Set([])
     filteredBugs.map(bug => (
         bug.labels.map(label => {
@@ -70,10 +72,7 @@ async function save(bugToSave) {
             if (bugIdx === -1) {
                 throw new Error(`Could not find bug with id ${bugToSave._id}`)
             }
-
             // TODO : Add labels functionality
-
-
             bugToSave = { ...bugs[bugIdx], severity: bugToSave.severity }
             bugs[bugIdx] = bugToSave
         } else {
@@ -98,12 +97,13 @@ async function _saveBugsToFile(path = "./data/bugs.json") {
     })
 }
 
-function getDefaultFilter() {
+function getDefaultFilter(userId = null) {
     return {
         textSearch: "",
         minSeverity: "",
         labels: [],
-        pageIdx: 0
+        pageIdx: 0,
+        createdBy: userId
     }
 }
 
@@ -112,6 +112,12 @@ function getDefaultSort(){
         sortBy: "severity",
         sortDir: -1
     }
+}
+
+function _filterByUser(bugs, userId){
+    // TODO : Remove question mark after converted all bugs to have createdBy
+    bugs = bugs.filter(bug => bug.createdBy?._id === userId)
+    return bugs
 }
 
 function _filterBugs(bugs, filterBy){
