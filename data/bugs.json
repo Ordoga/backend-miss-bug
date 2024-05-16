@@ -2,7 +2,10 @@
     {
         "title": "Very Bad Bug",
         "description": "Its a very bad bug",
-        "labels": [],
+        "labels": [
+            "Need CR",
+            "Severe"
+        ],
         "severity": 51,
         "createdBy": {
             "_id": "wjfShk",
@@ -14,7 +17,11 @@
     {
         "title": "Another Horrific Bug",
         "description": "Horrific!!",
-        "labels": [],
+        "labels": [
+            "Severe",
+            "Node",
+            "Server"
+        ],
         "severity": 60,
         "createdBy": {
             "_id": "wjfShk",
@@ -26,7 +33,10 @@
     {
         "title": "Coffee Machine Broke",
         "description": "Water does not come out",
-        "labels": [],
+        "labels": [
+            "Office",
+            "Severe"
+        ],
         "severity": 9999,
         "createdBy": {
             "_id": "wjfShk",
@@ -38,7 +48,11 @@
     {
         "title": "Bad API Call",
         "description": "Rest does not rest",
-        "labels": [],
+        "labels": [
+            "API",
+            "Axios",
+            "Rest API"
+        ],
         "severity": 15,
         "createdBy": {
             "_id": "D3UBba",
@@ -50,7 +64,11 @@
     {
         "title": "Express credentials wrong",
         "description": "Cant get calls",
-        "labels": [],
+        "labels": [
+            "API",
+            "Express",
+            "Rest API"
+        ],
         "severity": 8,
         "createdBy": {
             "_id": "D3UBba",
@@ -62,7 +80,10 @@
     {
         "title": "Slow Fetch",
         "description": "Bugs load slowly",
-        "labels": [],
+        "labels": [
+            "API",
+            "Need CR"
+        ],
         "severity": 12,
         "createdBy": {
             "_id": "GBkNMK",
@@ -74,7 +95,10 @@
     {
         "title": "Uncontrolled Re-Renders",
         "description": "Re-renders dont stop",
-        "labels": [],
+        "labels": [
+            "Front-End",
+            "React"
+        ],
         "severity": 30,
         "createdBy": {
             "_id": "GBkNMK",
@@ -82,5 +106,20 @@
         },
         "_id": "0L9LMt",
         "createdAt": 1715818614589
+    },
+    {
+        "title": "Cant Get Images",
+        "description": "Images dont load",
+        "labels": [
+            "Image",
+            "API"
+        ],
+        "severity": 24,
+        "createdBy": {
+            "_id": "D3UBba",
+            "fullname": "Or Doga"
+        },
+        "_id": "BbB9xE",
+        "createdAt": 1715859087984
     }
 ]

@@ -31,6 +31,7 @@ async function query(filterBy = getDefaultFilter(), sortBy = getDefaultSort()) {
         response.amountOfToalMathchingBugs = filteredBugs.length
         filteredBugs = _getPage(filteredBugs, filterBy.pageIdx)
         response.bugs = filteredBugs
+        console.log(response)
         return response
     } catch (err) {
         throw err
