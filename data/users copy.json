@@ -1,118 +1,26 @@
 [
     {
-        "_id": "9z86QG",
-        "fullname": "Puki Muki",
-        "username": "Pukimuki",
-        "password": "12345654321",
-        "score": 100
+        "fullname": "Nurit Behar",
+        "username": "NuritDK",
+        "password": "$2b$10$MR5GPlgZV7h668v7j13N4uDVOCdYub2l75QaEItiDdf3k3sd/0fV2",
+        "_id": "wjfShk",
+        "score": 100,
+        "isAdmin": false
     },
     {
-        "_id": "SXKy9E",
-        "fullname": "DarkKnight100",
-        "username": "DarkKnight40",
-        "password": "03031995",
-        "score": 114
-    },
-    {
-        "fullname": "Goofy Doofy",
-        "username": "EyalShaniInsideAPita",
-        "password": "TometoTomato",
-        "score": 87,
-        "_id": "BQ2Ol7"
-    },
-    {
-        "fullname": "Haim Cohen",
-        "username": "ShoomPilpel",
-        "password": "VeshemenZait",
-        "score": 400,
-        "_id": "X0MVkh"
-    },
-    {
-        "_id": "FfYP9N",
-        "fullname": "Jimi Hendrix",
-        "username": "PurpleHaze",
-        "password": "FoxyLady",
-        "score": 14
-    },
-    {
-        "_id": "7GYiBy",
-        "fullname": "Assasins Creed",
-        "username": "Ezio Petzio",
-        "password": "DaggerOfDoom",
-        "score": 14
-    },
-    {
-        "_id": "woPh4w",
-        "fullname": "Maple Story",
-        "username": "VDarkClericV",
-        "password": "123012391238",
-        "score": 742
-    },
-    {
-        "_id": "hd9d72",
         "fullname": "Or Doga",
-        "username": "Ordoga",
-        "password": "619619",
-        "score": 15
+        "username": "ordoga",
+        "password": "$2b$10$D4Ls9wZ25dSyWgzGMy9Q6eUX2LrPyOBfO2oGp32FQWkz5UoKDksm.",
+        "_id": "D3UBba",
+        "score": 100,
+        "isAdmin": false
     },
     {
-        "username": "Pukimuki43",
-        "password": "$2b$10$vHcif3ErWk6BqNbNwN0eu.ssCtXIruqFW5E/76vSlTgqe5CUq.AEW",
-        "_id": "3ha3b8"
-    },
-    {
-        "username": "Pukimuki50",
-        "password": "$2b$10$n8L9AVwnzXCKBcgLwukyYu.TOoxK.GepWqp6V112nPrN4ScCdmh2i",
-        "_id": "I09g98"
-    },
-    {
-        "username": "Pukimuki501",
-        "password": "$2b$10$1DLNNv4qvYO2K7m6tUDOquIxcxr8w/TFdCf38vifaDUkXeIK/Urna",
-        "_id": "qnRIcS"
-    },
-    {
-        "username": "Pukimuki5012",
-        "password": "$2b$10$IOBhqHCNoubs6m0.wMZn..Xyfjk2KFW7i5vbPCGzX78DLvbHtVLfe",
-        "_id": "NKO6xX"
-    },
-    {
-        "username": "Pukimuki50112",
-        "password": "$2b$10$q0cu0QddVVvZtmm.EvXyOeJD0j7Ztr.D1lQUTsoSM48/uteroBBpu",
-        "_id": "DvqIub"
-    },
-    {
-        "username": "Pukimuki501112",
-        "password": "$2b$10$MfOQscLnre6quvsU/e8QqeINIP1fv0DheCH1nXasi.4gQOCkXKFaS",
-        "_id": "rG9tGw"
-    },
-    {
-        "username": "Pukimuki5011112",
-        "password": "$2b$10$wpj9Ia/8dBn2aFOb1j1.Eu.YbLCaOXucWWmLbV1YVQaa1oelXsPDe",
-        "_id": "xoQGVt"
-    },
-    {
-        "username": "Pukimuki50111112",
-        "password": "$2b$10$H2c1CbLVMtJsjj0iWRDcd..xHFDg0eSAkkZ75ya5ABmkfzPe/Z7qG",
-        "_id": "GVsH21"
-    },
-    {
-        "username": "Pukimuki501111112",
-        "password": "$2b$10$6Jf5/g3bH9Qf9IfJRXD3oOJV3dX.30an7Tb9fK4G9M65b6QwOx3nq",
-        "_id": "5z6b5n"
-    },
-    {
-        "username": "Pukimuki5011111112",
-        "password": "$2b$10$z/HnY9UJKui3e741sC/1Fuo14qp4qCnunbUzWkY10i7OkxamOOGqq",
-        "_id": "MeUbWN"
-    },
-    {
-        "username": "Pukimuki501111111112",
-        "password": "$2b$10$jN6U8omlJ3YaBd/DNPnue.k4VCR7RCgoRvhdHdYEFRktNCdhgSC4G",
-        "_id": "gIQYkb"
-    },
-    {
-        "username": "newnew",
-        "password": "$2b$10$EL8NUjUzai/fxOFs.1R9UOH6M6PKRLL9qZ/9jslbeqTBu9kTbhYsW",
-        "_id": "IU1JaP"
+        "fullname": "Puki Muki",
+        "username": "pukimuki",
+        "password": "$2b$10$HJfhpsnKAfFs1pKeFlgwhe5RTtcvXgwm9SFwcqBPVPnJR5atQRPg6",
+        "_id": "GBkNMK",
+        "score": 100,
+        "isAdmin": false
     }
 ]

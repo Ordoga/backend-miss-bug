@@ -24,3 +24,14 @@ export async function checkUserByParams(req,res,next){
     if(req.loggedInUser._id !== bug.createdBy._id) return res.status(401).send('Not your bug')
     next() 
 }
+
+export function requireAdmin(req, res, next) {
+	const loggedinUser = authService.validateToken(req.cookies.loginToken)
+	if (!loggedinUser) return res.status(401).send('Not authenticated')
+	if (!loggedinUser.isAdmin) {
+		return res.status(403).send(`Not autorized`)
+	}
+
+	req.loggedinUser = loggedinUser
+	next()
+}

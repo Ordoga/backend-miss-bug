@@ -1,49 +1,34 @@
 [
     {
-        "_id": "3nzpwo",
-        "fullname": "Or Doga",
-        "username": "FirstUser",
-        "password": "$2b$10$oiv8x17gV5O1ApnZao6St.9POduqOvDqEeNo/VV1HhmT.c9kkFAES",
-        "score": 100
-    },
-    {
-        "fullname": "Or Doga",
-        "username": "second",
-        "password": "$2b$10$ROoMn.W1xSE3at47hJHUU.JgiHqJocHCF3/dzPwMcbqKFpTPzUIwe",
-        "_id": "h1reY3",
-        "score": 100,
-        "isAdmin": false
-    },
-    {
-        "fullname": "Or Doga",
-        "username": "Yoyo",
-        "password": "$2b$10$DyCQiNglv1kcS/hmU0qmoueepwfsE112JId3918BVMNsLtkWLOowK",
-        "_id": "7X5KU7",
+        "_id": "wjfShk",
+        "fullname": "Nurit Behar2",
+        "username": "NuritDK",
+        "password": "$2b$10$MR5GPlgZV7h668v7j13N4uDVOCdYub2l75QaEItiDdf3k3sd/0fV2",
         "score": 100,
         "isAdmin": false
     },
     {
         "fullname": "Or Doga",
         "username": "ordoga",
-        "password": "$2b$10$q/u6BILNdMov8GvLcweU6u1aL5iFwAPXLikrVLy9oStPqJacyK/RS",
-        "_id": "ZPIdfw",
+        "password": "$2b$10$D4Ls9wZ25dSyWgzGMy9Q6eUX2LrPyOBfO2oGp32FQWkz5UoKDksm.",
+        "_id": "D3UBba",
         "score": 100,
         "isAdmin": false
     },
     {
-        "fullname": "Nurit Behar",
-        "username": "DKnb",
-        "password": "$2b$10$5wi3mkwl8cjsxxPDy1Xs7OTVbHfSSMsVARttJ6tZr9LiHXGgAAJfq",
-        "_id": "fpiMnz",
+        "fullname": "Puki Muki",
+        "username": "pukimuki",
+        "password": "$2b$10$HJfhpsnKAfFs1pKeFlgwhe5RTtcvXgwm9SFwcqBPVPnJR5atQRPg6",
+        "_id": "GBkNMK",
         "score": 100,
         "isAdmin": false
     },
     {
-        "fullname": "Shuki Duki",
-        "username": "shukiduki",
-        "password": "$2b$10$5ebKL/OduY3DC9tK6p5O4.8lxj4zfa9pH6O2aF10tVC3WaO9bM04W",
-        "_id": "r46cgP",
+        "fullname": "admin",
+        "username": "admin",
+        "password": "$2b$10$gZpDMa.Q6FKeemNGB0NYCekx1mUi/UNHbFXdRzfX9gidvvpGujM8S",
+        "_id": "5znP8a",
         "score": 100,
-        "isAdmin": false
+        "isAdmin": true
     }
 ]
