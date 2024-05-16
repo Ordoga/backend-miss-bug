@@ -30,5 +30,13 @@
         "_id": "5znP8a",
         "score": 100,
         "isAdmin": true
+    },
+    {
+        "fullname": "Noa Katz",
+        "username": "noakatz",
+        "password": "$2b$10$LCfsLWS8q3JJFIXozh/sOeq3tYd4f0G1e7oyXAVwxYhrMNdZidx2G",
+        "score": 100,
+        "_id": "xIJg27",
+        "isAdmin": false
     }
 ]

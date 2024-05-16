@@ -1,4 +1,6 @@
 import { userService } from "./user.service.js";
+import bcrypt from 'bcrypt'
+
 
 export async function getUsers(req,res){
     try {
@@ -20,8 +22,10 @@ export async function getUser(req,res){
 }
 
 export async function addUser(req,res){
-    const { fullname, username, password, score } = req.body
-    let userToSave = { fullname, username, password, score : +score }
+    const { fullname, username, password } = req.body
+    const saltRounds = 10
+    const hashedPassword = await bcrypt.hash(password, saltRounds)
+    let userToSave = { fullname, username, password:hashedPassword, score : 100 }
     try {
         userToSave = await userService.save(userToSave)
         res.send(userToSave)
